@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textbox Generator</title>
+  <style>
+    .container {
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <label for="actionDropdown">Choose an action:</label>
+    <select id="actionDropdown">
+      <option value="Random">Choose One:</option>
+      <option value="add">Add Textbox</option>
+      <option value="remove">Remove Textbox</option>
+    </select>
+    <div id="main-container" style="display:block;">
+      <div id="addContainer" style="display: none;">
+        <label for="numTextboxes">Enter the number:</label>
+        <input type="number" id="numTextboxes" min="1" value="1">
+      </div>
+
+      <div id="removeContainer" style="display: none;">
+        <label for="startRange">Start Range:</label>
+        <input type="number" id="startRange" min="1" value="1">
+        <label for="endRange">End Range:</label>
+        <input type="number" id="endRange" min="1" value="1">
+      </div>
+    </div>
+    <button onclick="performAction()">Perform Action</button>
+
+    <div id="textboxContainer">
+      
+    </div>
+  </div>
+
+</body>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
